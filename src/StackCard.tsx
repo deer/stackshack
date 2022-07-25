@@ -12,9 +12,11 @@ export default function StackCard({
   return (
     <div class={tw`rounded-xl border-1 p-5`}>
       <div class={tw`text-2xl font-bold mb-2`}>{stack.name}</div>
-      <div class={tw`mb-2`}>Frontend: {stack.frontend}</div>
+      <div class={tw`m  b-2`}>Frontend: {stack.frontend}</div>
       <div class={tw`mb-2`}>Backend: {stack.backend}</div>
-      <div class={tw`mb-2`}>Demo: {stack.demo}</div>
+      <div class={tw`mb-2`}>Demo: 
+        <a href={stack.demo}>{stack.demo}</a>
+      </div>
       <div class={tw`mb-2`}>{stack.description}</div>
     </div>
   );

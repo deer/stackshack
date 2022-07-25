@@ -1,0 +1,1 @@
+Creativity is hard. I didn't know what to build, so I thought I'd build a simple showcase that demonstrates various technology stacks. This can probably get explained better in the future.

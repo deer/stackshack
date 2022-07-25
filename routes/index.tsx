@@ -6,7 +6,8 @@ import Counter from "../islands/Counter.tsx";
 export default function Home() {
   return (
     <div class={tw`p-4 mx-auto max-w-screen-md`}>
-      <h1>StackShack</h1>
+      <h1 class={tw`text-4xl`}>StackShack</h1>
+      <h3>A site to compare various stacks</h3>
     </div>
   );
 }

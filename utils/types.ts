@@ -1,8 +1,7 @@
 export type Stack = {
     name: string;
-    frontend: string;
-    backend: string;
+    sort: number;
     demo: string;
     description: string;
-    order: number;
+    technologies: string[];
   };

@@ -2,11 +2,13 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { h } from "preact";
 import { tw } from "@twind";
-import { gql, request } from "graphql";
+import { gql, request, GraphQLClient } from "graphql";
 
 import { Stack } from "../utils/types.ts";
 import StackCard from "../src/StackCard.tsx";
 import Header from "../src/Header.tsx";
+
+import { TOKEN } from "../utils/env.ts";
 
 export const handler: Handlers<{
   stacks: Stack[];
@@ -14,22 +16,30 @@ export const handler: Handlers<{
   async GET(req, ctx) {
     const query = gql`
       {
-        sites {
-          name,
-          frontend,
-          backend,
-          demo,
-          description,
+        stacks {
+          demo
+          description
+          name
           order
+          technologies
         }
       }
     `;
-    const asdf = await request("https://qbkbluxz.directus.app/graphql", query);
+
+    const endpoint = "https://eu-central-1.aws.realm.mongodb.com/api/client/v2.0/app/application-0-eikog/graphql";
+    const graphQLClient = new GraphQLClient(endpoint, {
+      headers: {
+        apiKey: `${TOKEN}`,
+      },
+    });;
+    const result = await graphQLClient.request(query);
+    //console.log(JSON.stringify(graphQLClient, undefined, 2));
 
     return ctx.render({
-      stacks: asdf.sites.map((s: Stack) => ({
+      stacks: result.stacks.map((s: Stack) => ({
+
         ...s,
-      })).sort((a: Stack, b: Stack) => a.order - b.order),
+      }))
     });
   },
 };

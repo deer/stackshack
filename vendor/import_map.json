@@ -1,0 +1,30 @@
+{
+  "imports": {
+    "@twind": "../utils/twind.ts",
+    "$fresh/runtime.ts": "./deno.land/x/fresh@1.0.1/runtime.ts",
+    "preact": "./esm.sh/preact@10.8.2.js",
+    "preact/hooks": "./esm.sh/preact@10.8.2/hooks.js",
+    "$fresh/server.ts": "./deno.land/x/fresh@1.0.1/server.ts",
+    "twind/sheets": "./esm.sh/twind@0.16.17/sheets.js",
+    "graphql": "./deno.land/x/graphql_request@v4.1.0/mod.ts",
+    "twind": "./esm.sh/twind@0.16.17.js",
+    "https://crux.land/router@0.0.11": "./crux.land/api/get/uYQG.ts",
+    "https://cdn.esm.sh/": "./cdn.esm.sh/",
+    "https://crux.land/": "./crux.land/",
+    "https://deno.land/": "./deno.land/",
+    "https://esm.sh/": "./esm.sh/",
+    "https://unpkg.com/": "./unpkg.com/"
+  },
+  "scopes": {
+    "./cdn.esm.sh/": {
+      "/v87/is-plain-obj@4.1.0/deno/is-plain-obj.js": "./cdn.esm.sh/v87/is-plain-obj@4.1.0/deno/is-plain-obj.js"
+    },
+    "./esm.sh/": {
+      "preact": "./esm.sh/preact@10.8.2.js",
+      "preact/hooks": "./esm.sh/preact@10.8.2/hooks.js",
+      "preact-render-to-string": "./esm.sh/preact-render-to-string@5.2.0.js",
+      "/v87/preact@10.8.2/deno/preact.js": "./esm.sh/v87/preact@10.8.2/deno/preact.js",
+      "/v87/style-vendorizer@2.2.3/deno/style-vendorizer.js": "./esm.sh/v87/style-vendorizer@2.2.3/deno/style-vendorizer.js"
+    }
+  }
+}
